@@ -12,3 +12,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const ulFind = document.querySelector('ul');
+images.forEach(image => {
+  const createdLi = document.createElement('li');
+  const {url,alt} = image;
+  console.log(image.url)
+  createdLi.insertAdjacentHTML('beforeend', `<img src="${url}" alt="${alt}"  style="width: 200px; height: 150px;"></img>`);
+  ulFind.append(createdLi)
+  createdLi.style.width = '200px';
+  createdLi.style.height = '150px'; 
+  createdLi.style.margin = "10px";
+});
